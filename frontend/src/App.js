@@ -12,15 +12,16 @@ import CartScreen from './screens/CartScreen';
 import Navbar from './components/Navbar';
 import Backdrop from './components/Backdrop';
 import SideDrawer from './components/SideDrawer';
+import { set } from 'mongoose';
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
 
   return (
     <BrowserRouter>
-      < Navbar />
-      < SideDrawer show={sideToggle}/>
-      < Backdrop show={sideToggle}/>
+      < Navbar click={() => setSideToggle(true)}/>
+      < SideDrawer show={sideToggle} click={() => setSideToggle(false)}/>
+      < Backdrop show={sideToggle} click={() => setSideToggle(false)}/>
 
       <Routes>
         <Route path="/" element={<HomeScreen />}/>
