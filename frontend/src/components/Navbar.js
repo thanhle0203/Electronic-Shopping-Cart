@@ -8,20 +8,19 @@ const Navbar = () => {
         <h2>Electronic Shopping Cart</h2>
       </div>
 
-
         <ul className='navbar_links'>
           <li>
-            <Link to="/cart">
+            <Link to="/cart" className='cart_link'>
               <i className='fas fa-shopping-cart'></i>
+              <span>
               Cart
               <span className='cartlogo_badge'>0</span>
+              </span>
             </Link>
           </li>
 
           <li>
-            <Link to="/">
-              Shop
-            </Link>
+            <Link to="/">Shop</Link>
           </li>
         </ul>
 
