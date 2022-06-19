@@ -29,7 +29,7 @@ export const getProductDetailsReducer = (state = { product: {}}, action) => {
       return {
         loading: true,
       }
-    case actionTypes.GET_PRODUCTS_SUCCESS:
+    case actionTypes.GET_PRODUCT_DETAILS_SUCCESS:
       return {
         loading: false,
         product: action.payload
